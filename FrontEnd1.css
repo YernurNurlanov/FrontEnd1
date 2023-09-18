@@ -104,6 +104,7 @@ caption {
 }
 .right {
    float: right;
+   clear: left;
 }
 dl {
    color: white;
