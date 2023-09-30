@@ -1,0 +1,44 @@
+body {
+	background-color: rgb(24, 24, 24);
+	color: white;
+	padding: 0;
+	margin: 0;
+}
+.container {
+	padding: 10px;
+	max-width: 100%;
+	font-size: 50px;
+	background-color: rgb(253, 102, 2);
+}
+h1 {
+	margin-left: 7%;
+	margin-right: 10%;
+}
+.logo {
+	max-height: 100px;
+}
+.social {
+	margin-bottom: 20px;
+}
+.list-group {
+	font-size: 40px;
+	font-weight: 700;
+	border-radius: 25px;
+}
+.list-group-item {
+	color: white;
+	border-color: rgba(254, 93, 0, 0.5);
+	background-color: rgba(254, 93, 0, 0.5);
+	height: 100px;
+	border-radius: 25px;
+	margin: 10px;
+}
+.right, .teamlogo {
+	width: 65px;
+	float: right;
+	padding: 10px;
+}
+#foot {
+	display: flex;
+	background-color: black;
+}
