@@ -1,0 +1,76 @@
+body {
+   background-color: rgb(24, 24, 24);
+   color: white;
+   padding: 0;
+   margin: 0;
+}
+h1 {
+	margin-left: 7%;
+	margin-right: 10%;
+}
+.logo {
+	max-height: 100px;
+}
+.social {
+	margin-bottom: 20px;
+}
+.container {
+	padding: 10px;
+	max-width: 100%;
+	font-size: 50px;
+	background-color: rgb(253, 102, 2);
+}
+.row {
+	margin: 10px;
+}
+.nav-item {
+	padding: 5px;
+}
+a {
+	color: white;
+	text-decoration: none;
+}
+#Creator, #GroupTables, #Clubs {
+	display: inline-block;
+	margin-left: 7%;
+}
+#Form {
+	margin-top: 30px;
+}
+.carousel {
+	width: 410px;
+}
+.carousel-control-prev, .carousel-control-next {
+	bottom: auto;
+	top: 18px;
+}
+caption {
+	caption-side: top;
+	text-align: center;
+	color: white;
+	background-color: rgb(253, 102, 2);
+	border-radius: 25px 25px 0px 0px;
+}
+table {
+   font-size: 20px;
+   font-weight: bold;
+   background-color: white;
+   color: black;
+   border-radius: 0px 0px 25px 25px;
+   width: 400px;
+   height: 400px;
+}
+.num {
+   padding-left: 10px;
+}
+table, tr {
+   border: 1px solid rgb(24, 24, 24);
+}
+th {
+   background-color: black;
+   color: white;
+}
+#foot {
+	display: flex;
+	background-color: black;
+}
