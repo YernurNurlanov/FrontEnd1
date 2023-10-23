@@ -9,19 +9,21 @@ h1 {
 	margin-right: 10%;
 }
 .logo {
+	min-width: 20px;
 	max-height: 100px;
 }
 .social {
+	max-height: 30px;
 	margin-bottom: 20px;
 }
 .container {
 	padding: 10px;
 	max-width: 100%;
-	font-size: 50px;
+	font-size: 4em;
 	background-color: rgb(253, 102, 2);
 }
 .row {
-	margin: 10px;
+	margin: 5px;
 }
 .nav-item {
 	padding: 5px;
@@ -33,6 +35,7 @@ a {
 #Creator, #GroupTables, #Clubs {
 	display: inline-block;
 	margin-left: 7%;
+	margin-bottom: 30px;
 }
 #Form {
 	margin-top: 30px;
@@ -73,4 +76,37 @@ th {
 #foot {
 	display: flex;
 	background-color: black;
+}
+
+
+#marginLeft {
+	margin-left: 2%;
+}
+button {
+	background-color: rgb(253, 102, 2);
+	color: white;
+	font-weight: 500;
+}
+#task-list {
+	list-style: none;
+}
+li.complete {
+	text-decoration: line-through;
+}
+.task-checkbox {
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+
+#timer {
+	transition: color 0.5s;
+}
+.red {
+	color: red;
+}
+.sizeOf {
+	background-color: rgb(24, 24, 24);
+	border: none;
+	font-size: large;
 }
