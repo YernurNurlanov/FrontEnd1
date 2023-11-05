@@ -9,7 +9,7 @@ h1 {
 	margin-right: 10%;
 }
 .logo {
-	min-width: 20px;
+	min-width: 30px;
 	max-height: 100px;
 }
 .social {
@@ -19,11 +19,32 @@ h1 {
 .container {
 	padding: 10px;
 	max-width: 100%;
-	font-size: 4em;
+	font-size: 50px;
 	background-color: rgb(253, 102, 2);
+}
+.spin {
+	animation: spin 2s linear infinite;
+}
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
 }
 .row {
 	margin: 5px;
+}
+.image-text {
+  position: absolute;
+	font-size: 20px;
+  top: 50%;
+  left: 30%;
+  transform: translate(-20%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+#my-image, .card {
+	max-width: 400px;
+	height: 442px;
+	border-radius: 25px;
 }
 .nav-item {
 	padding: 5px;
@@ -34,14 +55,13 @@ a {
 }
 #Creator, #GroupTables, #Clubs {
 	display: inline-block;
-	margin-left: 7%;
 	margin-bottom: 30px;
 }
 #Form {
 	margin-top: 30px;
 }
 .carousel {
-	width: 410px;
+	max-width: 360px;
 }
 .carousel-control-prev, .carousel-control-next {
 	bottom: auto;
@@ -60,16 +80,17 @@ table {
    background-color: white;
    color: black;
    border-radius: 0px 0px 25px 25px;
-   width: 400px;
+   width: 330px;
    height: 400px;
 }
 .num {
-   padding-left: 10px;
+   padding-left: 5px;
 }
 table, tr {
    border: 1px solid rgb(24, 24, 24);
 }
 th {
+	max-width: 400px;
    background-color: black;
    color: white;
 }
@@ -79,34 +100,41 @@ th {
 }
 
 
-#marginLeft {
-	margin-left: 2%;
+#Game {
+	max-width: 400px;
+	height: 445px;
+	font-size: 30px;
+	border-radius: 25px;
+	color: black;
+	margin-right: 65px;
 }
-button {
-	background-color: rgb(253, 102, 2);
-	color: white;
-	font-weight: 500;
-}
-#task-list {
-	list-style: none;
-}
-li.complete {
-	text-decoration: line-through;
-}
-.task-checkbox {
-	margin-right: 10px;
-	cursor: pointer;
+.sortable {
+  display: flex;
+  flex-direction: column;
 }
 
+.draggable {
+	border-radius: 10px;
+  padding: 5px;
+  background-color: #e0e0e0;
+  margin: 3px;
+  cursor: pointer;
+  user-select: none;
+}
 
-#timer {
-	transition: color 0.5s;
+.message {
+  font-weight: bold;
+  font-size: large;
+  color: green;
+  display: none;
 }
-.red {
-	color: red;
-}
-.sizeOf {
-	background-color: rgb(24, 24, 24);
-	border: none;
+
+#checkButton {
+  background-color: #000000;
+	padding: 10px;
+  color: #fff;
+  border-radius: 10px;
+	max-width: 200px;
 	font-size: large;
+  cursor: pointer;
 }
