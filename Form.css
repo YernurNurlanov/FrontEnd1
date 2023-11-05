@@ -10,28 +10,38 @@ body {
 	font-size: 50px;
 	background-color: rgb(253, 102, 2);
 }
+.spin {
+	animation: spin 2s linear infinite;
+}
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
 h1 {
 	margin-left: 7%;
 	margin-right: 10%;
 }
-.error {
-	color: red;
-	font-size: 16px;
+.form-label {
+	font-size: 30px;
+}
+#age {
+	min-width: 350px;
+	color: grey;
+	background-color: white;
 }
 .custom-btn {
-  background-color: rgb(253, 102, 2);
-  font-size: 20px;
+  margin: 15px; 
+	color: white; 
+	background-color: rgb(253, 102, 2); 
+	font-size: 20px;
 }
 .logo {
+	min-width: 30px;
 	max-height: 100px;
 }
 .social {
+	max-height: 30px;
 	margin-bottom: 20px;
-}
-.right, .teamlogo {
-	width: 65px;
-	float: right;
-	padding: 10px;
 }
 #foot {
 	display: flex;
