@@ -11,21 +11,28 @@
 			integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" 
 			integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>	
-		<link rel="icon" href="https://mfl.life/public/images/zaglushka/mfl.webp">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<link rel="icon" href="favicon.png">
 		<link rel="stylesheet" href="Clubs.css" type="text/css">
 		<title>WINLINE MFL</title>
 	</head>
 	<body>
 		<header>
+			<!--Container-->
 			<div class="container d-flex justify-content-center align-items-center">
-				<img class="logo" src="https://mfl.life/public/images/logo.png">
-				<img class="logo" src="https://mfl.life/public/images/zaglushka/mfl.webp">
+				<!--Sound-->
+				<img id="image-element" class="logo" src="https://mfl.life/public/images/logo.png">
+				<audio id="audio-element">
+					<source src="sound.mp3" type="audio/mpeg">
+				</audio>
+				<a href="index.html"><img class="logo" src="https://mfl.life/public/images/zaglushka/mfl.webp"></a>
 				<h1>WINLINE MFL</h1>
-				<a href="https://vk.com/media.football.league"><img class="social" class="rounded float-end" src="https://mfl.life/public/images/icon_vk.png" height="30px"></a>
-				<a href="https://t.me/mediafootballleague"><img class="social" class="rounded float-end" src="https://mfl.life/public/images/icon_tg.png" height="30px"></a>
+				<a href="https://vk.com/media.football.league"><img class="social" src="https://mfl.life/public/images/icon_vk.png"></a>
+				<a href="https://t.me/mediafootballleague"><img class="social" src="https://mfl.life/public/images/icon_tg.png"></a>
 			</div>
 		</header>
 		<main>
+			<!--List Group-->
 			<ul class="list-group">
 				<li class="list-group-item d-flex justify-content-center align-items-center"><img class="teamlogo" src="https://mfl.life/media/objects/5/15/244981226643ff51104ca3_3.png" width="30px">2Drots
 					<a href="https://www.youtube.com/channel/UCOIRN19VunfPaW7ZfmOKeoQ"><img class="right" src="https://mfl.life/public/images/icon_yt.png" width="30px"></a></li>
@@ -69,7 +76,7 @@
 					<a href="https://youtube.com/c/%D0%A4%D0%9A%D0%94%D0%95%D0%9D%D0%AC%D0%93%D0%98"><img class="right" src="https://mfl.life/public/images/icon_yt.png" width="30px"></a></li>
 				<li class="list-group-item d-flex justify-content-center align-items-center"><img class="teamlogo" src="https://mfl.life/media/objects/5/11/761667089643ff56c8dc2a_3.png" width="30px">ФК Матч
 					<a href="https://youtube.com/channel/UCeAK3Ievttv9gCGeUrSPqZQ"><img class="right" src="https://mfl.life/public/images/icon_yt.png" width="30px"></a></li>
-				<li class="list-group-item d-flex justify-content-center align-items-center"><img class="teamlogo" src="https://mfl.life/media/objects/5/37/136327096164d7a92722f32_3.png" width="30px">ФК Уралец Медиа
+				<li class="list-group-item d-flex justify-content-center align-items-center"><img class="teamlogo" src="https://mfl.life/media/objects/5/37/136327096164d7a92722f32_3.png" width="30px">ФК Уралец
 					<a href="https://www.youtube.com/@UralecMedia"><img class="right" src="https://mfl.life/public/images/icon_yt.png" width="30px"></a></li>
 				<li class="list-group-item d-flex justify-content-center align-items-center"><img class="teamlogo" src="https://mfl.life/media/objects/5/32/164227584764d7a936afb16_3.png" width="30px">Чисто Питер
 					<a href="https://www.youtube.com/@chisto_mfc"><img class="right" src="https://mfl.life/public/images/icon_yt.png" width="30px"></a></li>
@@ -85,10 +92,22 @@
 						<a href="https://vk.com/media.football.league"><img src="https://mfl.life/public/images/icon_vk.png"></a>
 						<a href="https://www.youtube.com/@winlinemediafootball"><img src="https://mfl.life/public/images/icon_yt.png"></a>
 					</div>
-					<p style="font-size: 30px;">&copy; 2023 ФУТБОЛЬНАЯ МЕДИА ЛИГА «MFL»</p>
+					<p style="font-size: 0.3em;">&copy; 2023 ФУТБОЛЬНАЯ МЕДИА ЛИГА «MFL»</p>
 				</div>
-				<img src="https://mfl.life/public/images/logo_transparent.png" style="margin-left: auto;">
+				<img src="https://mfl.life/public/images/logo_transparent.png" style="margin-left: auto; max-height: 200px;">
 			</div>
 		</footer>
+		<script>
+		const image = document.getElementById("image-element");
+    const audio = document.getElementById("audio-element");
+    function playSound() {
+      image.classList.add("spin");
+      audio.play();
+      audio.addEventListener("ended", function() {
+        image.classList.remove("spin");
+      });
+    }
+    image.addEventListener("click", playSound);
+		</script>
 	</body>
 </html>

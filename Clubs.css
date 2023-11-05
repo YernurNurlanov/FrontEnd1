@@ -10,14 +10,23 @@ body {
 	font-size: 50px;
 	background-color: rgb(253, 102, 2);
 }
+.spin {
+	animation: spin 2s linear infinite;
+}
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
 h1 {
 	margin-left: 7%;
 	margin-right: 10%;
 }
 .logo {
+	min-width: 30px;
 	max-height: 100px;
 }
 .social {
+	max-height: 30px;
 	margin-bottom: 20px;
 }
 .list-group {
