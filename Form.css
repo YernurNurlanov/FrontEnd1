@@ -4,36 +4,16 @@ body {
 	padding: 0;
 	margin: 0;
 }
+/* header */
 .container {
 	padding: 10px;
 	max-width: 100%;
 	font-size: 50px;
 	background-color: rgb(253, 102, 2);
 }
-.spin {
-	animation: spin 2s linear infinite;
-}
-@keyframes spin {
-	0% { transform: rotate(0deg); }
-	100% { transform: rotate(360deg); }
-}
 h1 {
 	margin-left: 7%;
 	margin-right: 10%;
-}
-.form-label {
-	font-size: 30px;
-}
-#age {
-	min-width: 350px;
-	color: grey;
-	background-color: white;
-}
-.custom-btn {
-  margin: 15px; 
-	color: white; 
-	background-color: rgb(253, 102, 2); 
-	font-size: 20px;
 }
 .logo {
 	min-width: 30px;
@@ -43,7 +23,84 @@ h1 {
 	max-height: 30px;
 	margin-bottom: 20px;
 }
+/* main */
+h2 {
+	margin-top: 20px;
+	text-align: center;
+}
+.step button, .step #myButton {
+	background-color: rgb(253, 102, 2);
+	margin: 10px;
+	width: 100px;
+	height: 50px;
+	border-radius: 10px;
+	font-weight: bold;
+}
+label {
+	font-size: 25px;
+}
+input {
+	margin: 15px;
+}
+.step {
+  display: none;
+	text-align: center;
+}
+.step.show {
+  display: block;
+}
+/* Game */
+#Game {
+	max-width: 400px;
+	min-height: 445px;
+	font-size: 30px;
+	border-radius: 25px;
+	color: black;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.sortable {
+  display: flex;
+  flex-direction: column;
+}
+.draggable {
+	border-radius: 10px;
+  padding: 5px;
+  background-color: #e0e0e0;
+  margin: 3px;
+  cursor: pointer;
+  user-select: none;
+}
+.message {
+  font-weight: bold;
+  font-size: large;
+  color: green;
+  display: none;
+}
+#checkButton {
+  background-color: #000000;
+	padding: 10px;
+  color: #fff;
+  border-radius: 10px;
+	max-width: 200px;
+	font-size: large;
+  cursor: pointer;
+}
+/* footer */
 #foot {
 	display: flex;
 	background-color: black;
+}
+#footinfo {
+	width: 65%;
+}
+#footinfo p {
+	font-size: 35%;
+}
+#footlogo {
+	width: 35%;
+	max-width: 150px;
+	margin-left: auto;
 }

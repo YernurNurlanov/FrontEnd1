@@ -20,11 +20,7 @@
 		<header>
 			<!--Container-->
 			<div class="container d-flex justify-content-center align-items-center">
-				<!--Sound-->
 				<img id="image-element" class="logo" src="https://mfl.life/public/images/logo.png">
-				<audio id="audio-element">
-					<source src="sound.mp3" type="audio/mpeg">
-				</audio>
 				<a href="index.html"><img class="logo" src="https://mfl.life/public/images/zaglushka/mfl.webp"></a>
 				<h1>WINLINE MFL</h1>
 				<a href="https://vk.com/media.football.league"><img class="social" src="https://mfl.life/public/images/icon_vk.png"></a>
@@ -32,114 +28,71 @@
 			</div>
 		</header>
 		<main>
-			<div class="d-flex justify-content-center align-items-center">
-				<form id="myForm" style="min-width: 350px;">
-					<div class="text-center">
-						<label class="form-label" for="fname" style="font-size: 30px;">Имя</label>
-						<input class="form-control" id="fname" placeholder="Add your name" required>
+			<form id="myForm">
+					<h2>Challenge application</h2>
+					<div class="step" data-step="1">
+						<label for="#fname">Name:</label><br>
+						<input type="text" id="fname" name="name" placeholder="Add your name" required><br>
+						<button type="button" onclick="nextStep(1)">Next</button>
 					</div>
-					<div class="text-center">
-						<label class="form-label" for="#city" style="font-size: 30px;">Город</label>
-						<input class="form-control" id="city" placeholder="Add your city" required>
+					<div class="step" data-step="2">
+						<label for="#city">City:</label><br>
+						<input type="text" id="city" name="city" placeholder="Add your city" required><br>
+						<button type="button" onclick="prevStep(2)">Previous</button>
+						<button type="button" onclick="nextStep(2)">Next</button>
 					</div>
-					<div class="text-center">
-						<label class="form-label" for="#age" style="font-size: 30px;">Возраст</label>
-						<div class="dropdown">
-							<button id="age" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-								Select an age</button>
-							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="#">14-18</a></li>
-								<li><a class="dropdown-item" href="#">18-22</a></li>
-								<li><a class="dropdown-item" href="#">22+</a></li>
-							</ul>
+					<div class="step" data-step="3">
+						<label for="#age">Age:</label><br>
+						<input type="text" id="age" name="age" placeholder="Add your age 16-45" required><br>
+						<button type="button" onclick="prevStep(3)">Previous</button>
+						<button type="button" onclick="nextStep(3)">Next</button>
+					</div>
+					<div class="step" data-step="4">
+						<label for="#number">Number:</label><br>
+						<input type="text" id="number" name="number" placeholder="Add your tel number" required><br>
+						<button type="button" onclick="prevStep(4)">Previous</button>
+						<button type="button" onclick="nextStep(4)">Next</button>
+					</div>
+					<div class="step" data-step="5">
+						<label for="#telegram">Telegram:</label><br>
+						<input type="text" id="telegram" name="telegram" placeholder="Add your telegram" required><br>
+						<button type="button" onclick="prevStep(5)">Previous</button>
+						<button type="button" onclick="nextStep(5)">Next</button>
+					</div>
+					<div class="step" data-step="6">
+						<label for="#email">Email:</label><br>
+						<input type="email" id="email" name="email" placeholder="Add your email" required><br>
+						<button type="button" onclick="prevStep(6)">Previous</button>
+						<!--Bootstrap Button-->
+						<button id="myButton" type="submit" class="btn custom-btn" onmouseover="increaseFontWeight()" onmouseout="resetFontWeight()">Submit</button>
+					</div>
+					<div id="Game" class="container">
+						<div style="color:white">Put the teams in right order to submit your answers.</div>
+						<div class="sortable">
+							<div id="element1" class="draggable">Титан</div>
+							<div id="element2" class="draggable">Broke Boys</div>
+							<div id="element3" class="draggable">Эгриси</div>
+							<div id="element4" class="draggable">Fight Nights</div>
 						</div>
+						<button id="checkButton">Check Order</button>
+						<div id="result" class="message"></div>
 					</div>
-					<div class="text-center">
-						<label class="form-label" for="#number" style="font-size: 30px;">Номер телефона</label>
-						<input class="form-control" id="number" type="tel" placeholder="Add your tel number" required>
-					</div>
-					<div class="text-center">
-						<label class="form-label" for="#telegram" style="font-size: 30px;">Телеграм</label>
-						<input class="form-control" id="telegram" placeholder="Add your telegram" required>
-					</div>
-					<div class="text-center">
-						<label class="form-label" for="#email" style="font-size: 30px;">Почта</label>
-						<input class="form-control" id="email" type="email" placeholder="Add your email"required>
-					</div>
-					<div class="text-center">
-						<input id="myButton" type="submit" class="btn custom-btn" onmouseover="increaseFontWeight()" onmouseout="resetFontWeight()" style="margin: 15px; color: white; background-color: rgb(253, 102, 2); font-size: 20px;" value="Submit">
-					</div>
-				</form>
-			</div>
+			</form>
 		</main>
 		<footer>
 			<div class="container" id="foot">
-				<div>
+				<div id="footinfo">
 					<div>
 						<a href="https://t.me/mediafootballleague"><img src="https://mfl.life/public/images/icon_tg.png"></a>
 						<a href="https://vk.com/media.football.league"><img src="https://mfl.life/public/images/icon_vk.png"></a>
 						<a href="https://www.youtube.com/@winlinemediafootball"><img src="https://mfl.life/public/images/icon_yt.png"></a>
 					</div>
-					<p style="font-size: 0.3em;">&copy; 2023 ФУТБОЛЬНАЯ МЕДИА ЛИГА «MFL»</p>
+					<p>&copy; 2023 ФУТБОЛЬНАЯ МЕДИА ЛИГА «MFL»</p>
+					<p>&copy; Yernur Nurlanov SE-2216</p>
 				</div>
-				<img src="https://mfl.life/public/images/logo_transparent.png" style="margin-left: auto; max-height: 200px;">
+				<img id="footlogo" src="https://mfl.life/public/images/logo_transparent.png">
 			</div>
 		</footer>
-		<script>
-				const form = document.getElementById('myForm');
-        form.addEventListener('submit', function (e) {
-          // Validate the form fields
-          const fname = document.getElementById('fname').value;
-					const city = document.getElementById('city').value;
-					const number = document.getElementById('number').value;
-					const telegram = document.getElementById('telegram').value;
-					const email = document.getElementById('email').value;
-					//Regexes for validation
-					const nameCityRegex = /^[A-Za-z]+$/;
-					const numberRegex = /^[0-9]{11}$/;
-					const telegramRegex = /^@.+/;
-					// Validate 'Имя' field
-					if (!nameCityRegex.test(fname)) {
-						alert('"Имя" field must contains only letters');
-						e.preventDefault();
-          }
-					// Validate 'Город' field
-					if (!nameCityRegex.test(city)) {
-            alert('"Город" field must contains only letters');
-						e.preventDefault();
-          }
-					// Validate 'Номер телефона' field
-					if (!numberRegex.test(number) || number[0] != 8 || number[1] != 7) {
-            alert('"Номер телефона" field must contains 11 digits and starts with "87"');
-						e.preventDefault();
-          }
-					// Validate 'Телеграм' field
-					if (!telegramRegex.test(telegram)) {
-            alert('"Телеграм" field must starts with "@"');
-						e.preventDefault();
-          }
-				});
-				//Increase weight of button
-				function increaseFontWeight() {
-					const button = document.getElementById("myButton");
-					button.style.fontWeight = "bold";
-				}
-				//Reset weight of button
-				function resetFontWeight() {
-					const button = document.getElementById("myButton");
-					button.style.fontWeight = "normal";
-				}
-				// Sound
-				const image = document.getElementById("image-element");
-				const audio = document.getElementById("audio-element");
-				function playSound() {
-					image.classList.add("spin");
-					audio.play();
-					audio.addEventListener("ended", function() {
-						image.classList.remove("spin");
-					});
-				}
-				image.addEventListener("click", playSound);
-		</script>
+		<script src="Form.js"></script>
 	</body>
 </html>
