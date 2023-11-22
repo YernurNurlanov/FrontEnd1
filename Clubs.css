@@ -4,6 +4,7 @@ body {
 	padding: 0;
 	margin: 0;
 }
+/* header */
 .container {
 	padding: 10px;
 	max-width: 100%;
@@ -29,6 +30,7 @@ h1 {
 	max-height: 30px;
 	margin-bottom: 20px;
 }
+/* main */
 .list-group {
 	font-size: 40px;
 	font-weight: 700;
@@ -47,7 +49,19 @@ h1 {
 	float: right;
 	padding: 10px;
 }
+/* footer */
 #foot {
 	display: flex;
 	background-color: black;
+}
+#footinfo {
+	width: 65%;
+}
+#footinfo p {
+	font-size: 35%;
+}
+#footlogo {
+	width: 35%;
+	max-width: 150px;
+	margin-left: auto;
 }

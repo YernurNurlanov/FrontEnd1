@@ -86,28 +86,18 @@
 		</main>
 		<footer>
 			<div class="container" id="foot">
-				<div>
+				<div id="footinfo">
 					<div>
 						<a href="https://t.me/mediafootballleague"><img src="https://mfl.life/public/images/icon_tg.png"></a>
 						<a href="https://vk.com/media.football.league"><img src="https://mfl.life/public/images/icon_vk.png"></a>
 						<a href="https://www.youtube.com/@winlinemediafootball"><img src="https://mfl.life/public/images/icon_yt.png"></a>
 					</div>
-					<p style="font-size: 0.3em;">&copy; 2023 ФУТБОЛЬНАЯ МЕДИА ЛИГА «MFL»</p>
+					<p>&copy; 2023 ФУТБОЛЬНАЯ МЕДИА ЛИГА «MFL»</p>
+					<p>&copy; Yernur Nurlanov SE-2216</p>
 				</div>
-				<img src="https://mfl.life/public/images/logo_transparent.png" style="margin-left: auto; max-height: 200px;">
+				<img id="footlogo" src="https://mfl.life/public/images/logo_transparent.png">
 			</div>
 		</footer>
-		<script>
-		const image = document.getElementById("image-element");
-    const audio = document.getElementById("audio-element");
-    function playSound() {
-      image.classList.add("spin");
-      audio.play();
-      audio.addEventListener("ended", function() {
-        image.classList.remove("spin");
-      });
-    }
-    image.addEventListener("click", playSound);
-		</script>
+		<script src="Clubs.js"></script>
 	</body>
 </html>
