@@ -4,6 +4,13 @@ body {
    padding: 0;
    margin: 0;
 }
+/* header */
+.container {
+	padding: 10px;
+	max-width: 100%;
+	font-size: 50px;
+	background-color: rgb(253, 102, 2);
+}
 h1 {
 	margin-left: 7%;
 	margin-right: 10%;
@@ -16,22 +23,45 @@ h1 {
 	max-height: 30px;
 	margin-bottom: 20px;
 }
-.container {
-	padding: 10px;
-	max-width: 100%;
-	font-size: 50px;
-	background-color: rgb(253, 102, 2);
-}
-.spin {
-	animation: spin 2s linear infinite;
-}
-@keyframes spin {
-	0% { transform: rotate(0deg); }
-	100% { transform: rotate(360deg); }
-}
+/* main */
 .row {
-	margin: 5px;
+	margin: 0;
 }
+.card, .carousel {
+	margin-bottom: 20px;
+}
+.nav-link {
+	color: white;
+}
+.nav-link:hover {
+	color: rgb(253, 102, 2);
+}
+/* Modal Box */
+.modal {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+  margin: auto;
+	width: 350px;
+	height: 470px;
+}
+#myModal img {
+	margin-left: auto;
+	margin-right: auto;
+	height: 400px;
+	width: 300px;
+}
+.close {
+  color: black;
+  margin-left: auto;
+	margin-right: 5px;
+  font-size: 28px;
+  font-weight: bold;
+}
+/* Card */
 .image-text {
   position: absolute;
 	font-size: 20px;
@@ -41,33 +71,32 @@ h1 {
   opacity: 0;
   transition: opacity 0.3s;
 }
-#my-image, .card {
-	max-width: 400px;
-	height: 442px;
+#my-image {
+	width: 100%;
 	border-radius: 25px;
 }
-.nav-item {
-	padding: 5px;
+.card {
+	width: 75%;
+	min-width: 300px;
+	border-radius: 25px;
 }
-a {
-	color: white;
-	text-decoration: none;
+.card {
+	margin-left: auto;
+	margin-right: auto;
 }
-#Creator, #GroupTables, #Clubs {
-	display: inline-block;
-	margin-bottom: 30px;
-}
-#Form {
-	margin-top: 30px;
-}
+/* group table */
 .carousel {
-	max-width: 360px;
+	width: 75%;
+	min-width: 300px;
+	margin-left: auto;
+	margin-right: auto;
 }
 .carousel-control-prev, .carousel-control-next {
 	bottom: auto;
 	top: 18px;
 }
 caption {
+	padding: 15px;
 	caption-side: top;
 	text-align: center;
 	color: white;
@@ -80,8 +109,8 @@ table {
    background-color: white;
    color: black;
    border-radius: 0px 0px 25px 25px;
-   width: 330px;
-   height: 400px;
+   width: 100%;
+	 height: 470px;
 }
 .num {
    padding-left: 5px;
@@ -90,51 +119,33 @@ table, tr {
    border: 1px solid rgb(24, 24, 24);
 }
 th {
-	max-width: 400px;
    background-color: black;
    color: white;
 }
+/* Scroll to top button */
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+/* footer */
 #foot {
 	display: flex;
 	background-color: black;
 }
-
-
-#Game {
-	max-width: 400px;
-	height: 445px;
-	font-size: 30px;
-	border-radius: 25px;
-	color: black;
-	margin-right: 65px;
+#footinfo {
+	width: 65%;
 }
-.sortable {
-  display: flex;
-  flex-direction: column;
+#footinfo p {
+	font-size: 35%;
 }
-
-.draggable {
-	border-radius: 10px;
-  padding: 5px;
-  background-color: #e0e0e0;
-  margin: 3px;
-  cursor: pointer;
-  user-select: none;
-}
-
-.message {
-  font-weight: bold;
-  font-size: large;
-  color: green;
-  display: none;
-}
-
-#checkButton {
-  background-color: #000000;
-	padding: 10px;
-  color: #fff;
-  border-radius: 10px;
-	max-width: 200px;
-	font-size: large;
-  cursor: pointer;
+#footlogo {
+	width: 35%;
+	max-width: 150px;
+	margin-left: auto;
 }
